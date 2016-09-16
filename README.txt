@@ -1,19 +1,13 @@
-This is the skeleton code for the Mastermind Game.
+This is the code for the Mastermind Game.
+Rules can be found at: https://www.wikiwand.com/en/Mastermind_(board_game)
 
-Your job is to fill in all the places where it says 
-"your code goes here".
+The program utilizes MVC model, where Mastermind.java is the controller, MastermindModel.java is the model, and View is the view. 
+The controller, constructs the frame with components for View to display and instructs View to paint the display. It also takes care of actions related to clicks, analyzes the position the user clicks on the panel, then sends the information to model for computations. It determines, from the results by model, if the user has won or lost or is still in the game and controls the view accrodingly.
 
-Please feel free to change the implied flow of the game and the GUI if
-you like. Currently it's set up to draw a grid in a Frame and to read
-one button press (for "submit guess") and a couple of different
-MouseEvents (one to select a color and one to select where to put the
-color. It's also set up to use a variable called "currentRow" to keep
-track of which row of squares to display the current guess from the
-player and response from the program. Notice that current Row is passed
-to the view.fillBoard() method so it knows where fill in the rectangles with
-color. You may also change any of the variable names. And "fillRect" is
-a hint.
+The View simply paints and repaints the board. It remembers the colors and can use the colors to fill in the cells with instructions from controller. It also implements methods to announce Win or Loss, or to display answer.
 
-If you don't want to change the GUI, just fill in all the code places.
+The model is responsible for the computation part of the program. It can generate and random secret code. It has methods to check the guess made by player against the secret code and return the results to controller.
 
-Good luck!
+Feel free to contribute to any components you would like to.
+
+Thank you.
